@@ -13,13 +13,13 @@ const Sidebar: React.FC<SidebarProps> = ({ activeTab, onTabChange, isOpen, onClo
   return (
     <>
       {/* Mobile Overlay */}
-      <div 
+      <div
         className={`fixed inset-0 z-20 bg-black/50 backdrop-blur-sm transition-opacity lg:hidden ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
         onClick={onClose}
       />
 
       {/* Sidebar Container */}
-      <aside 
+      <aside
         className={`fixed top-0 left-0 z-30 h-screen w-64 bg-white dark:bg-slate-800 border-r border-gray-100 dark:border-slate-700 flex flex-col justify-between transition-transform duration-300 lg:translate-x-0 lg:static shadow-soft dark:shadow-none
         ${isOpen ? 'translate-x-0' : '-translate-x-full'}
         `}
@@ -28,10 +28,10 @@ const Sidebar: React.FC<SidebarProps> = ({ activeTab, onTabChange, isOpen, onClo
           {/* Brand Logo */}
           {/* Brand Logo */}
           <div className="flex justify-center mb-10 px-2">
-            <img 
-              src="/logo.png" 
-              alt="IBRRA Logo" 
-              className="h-12 w-auto object-contain dark:brightness-0 dark:invert transition-all"
+            <img
+              src="/logo.png"
+              alt="IBRRA Logo"
+              className="h-12 w-auto object-contain logo-filter"
             />
           </div>
 
@@ -47,15 +47,15 @@ const Sidebar: React.FC<SidebarProps> = ({ activeTab, onTabChange, isOpen, onClo
                     if (window.innerWidth < 1024) onClose();
                   }}
                   className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 group
-                    ${isActive 
-                      ? 'bg-red-50 dark:bg-slate-700/50 text-ibrra-coral shadow-sm font-semibold' 
+                    ${isActive
+                      ? 'bg-red-50 dark:bg-slate-700/50 text-ibrra-coral shadow-sm font-semibold'
                       : 'text-gray-500 dark:text-slate-400 hover:bg-gray-50 dark:hover:bg-slate-700/50 hover:text-ibrra-dark dark:hover:text-slate-100 font-medium'
                     }
                   `}
                 >
-                  <item.icon 
-                    size={22} 
-                    className={`transition-transform duration-200 ${isActive ? 'scale-110' : 'group-hover:scale-110'}`} 
+                  <item.icon
+                    size={22}
+                    className={`transition-transform duration-200 ${isActive ? 'scale-110' : 'group-hover:scale-110'}`}
                   />
                   <span className="text-sm">{item.label}</span>
                 </button>

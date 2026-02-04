@@ -90,6 +90,18 @@
         transform: translateY(0);
       }
     }
+
+    /* Logo Color Filters */
+    /* Light Mode: Turn Black to IBRRA Coral (#E74C4C) */
+    .logo-filter {
+      filter: invert(43%) sepia(61%) saturate(2220%) hue-rotate(330deg) brightness(95%) contrast(89%);
+      transition: filter 0.3s ease-in-out;
+    }
+
+    /* Dark Mode: Turn Black to White */
+    .dark .logo-filter {
+      filter: brightness(0) invert(1);
+    }
   </style>
   <script type="importmap">
 {
