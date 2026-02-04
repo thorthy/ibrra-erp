@@ -26,14 +26,13 @@ const Sidebar: React.FC<SidebarProps> = ({ activeTab, onTabChange, isOpen, onClo
       >
         <div className="p-6">
           {/* Brand Logo */}
-          <div className="flex items-center gap-3 mb-10 px-2">
-            <div className="size-10 bg-gradient-to-br from-ibrra-coral to-orange-400 rounded-lg flex items-center justify-center text-white shadow-lg shadow-ibrra-coral/30">
-              <HeartPulse size={24} />
-            </div>
-            <div>
-              <h1 className="text-xl font-bold tracking-tight text-ibrra-dark dark:text-white transition-colors">IBRRA 360</h1>
-              <p className="text-xs text-gray-500 dark:text-slate-400 font-medium transition-colors">Admin System</p>
-            </div>
+          {/* Brand Logo */}
+          <div className="flex justify-center mb-10 px-2">
+            <img 
+              src="/logo.png" 
+              alt="IBRRA Logo" 
+              className="h-12 w-auto object-contain dark:brightness-0 dark:invert transition-all"
+            />
           </div>
 
           {/* Nav Items */}
